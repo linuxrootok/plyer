@@ -29,8 +29,8 @@ class AndroidAudio(Audio):
     def _start(self):
         self._recorder = MediaRecorder()
         self._recorder.setAudioSource(AudioSource.DEFAULT)
-        self._recorder.setOutputFormat(OutputFormat.OGG)
-        self._recorder.setAudioEncoder(AudioEncoder.VORBIS)
+        self._recorder.setOutputFormat(OutputFormat.DEFAULT)
+        self._recorder.setAudioEncoder(AudioEncoder.DEFAULT)
         self._recorder.setOutputFile(self.file_path)
 
         self._recorder.prepare()
